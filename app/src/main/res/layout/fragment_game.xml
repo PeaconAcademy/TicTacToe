@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    tools:context=".ui.game.GameFragment">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Your Turn!" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/status">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/play_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Play again!"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/use_spell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Use spell!"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buy_spell"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy spell!"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/block1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="0"
+        app:layout_constraintBottom_toTopOf="@id/block4"
+        app:layout_constraintEnd_toEndOf="@id/block4"
+        app:layout_constraintStart_toStartOf="@+id/block4"
+        tools:src="@drawable/x1" />
+
+    <ImageView
+        android:id="@+id/block2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="1"
+        app:layout_constraintBottom_toTopOf="@+id/block5"
+        app:layout_constraintEnd_toEndOf="@id/block5"
+        app:layout_constraintStart_toStartOf="@+id/block5"
+        tools:src="@drawable/o1" />
+
+    <ImageView
+        android:id="@+id/block3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="2"
+        app:layout_constraintBottom_toTopOf="@+id/block6"
+        app:layout_constraintEnd_toEndOf="@+id/block6"
+        app:layout_constraintStart_toStartOf="@+id/block6"
+        tools:src="@drawable/o1" />
+
+    <ImageView
+        android:id="@+id/block4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="3"
+        app:layout_constraintEnd_toStartOf="@+id/block5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/block5"
+        tools:src="@drawable/o1" />
+
+    <ImageView
+        android:id="@+id/block5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/block6"
+        app:layout_constraintStart_toEndOf="@+id/block4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/x1" />
+
+    <ImageView
+        android:id="@+id/block6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/block5"
+        app:layout_constraintTop_toTopOf="@+id/block5"
+        tools:src="@drawable/x1" />
+
+
+    <ImageView
+        android:id="@+id/block7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="6"
+        app:layout_constraintEnd_toEndOf="@id/block4"
+        app:layout_constraintStart_toStartOf="@+id/block4"
+        app:layout_constraintTop_toBottomOf="@+id/block4"
+        tools:src="@drawable/o1" />
+
+    <ImageView
+        android:id="@+id/block8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="7"
+        app:layout_constraintEnd_toEndOf="@id/block5"
+        app:layout_constraintStart_toStartOf="@+id/block5"
+        app:layout_constraintTop_toBottomOf="@+id/block5"
+        tools:src="@drawable/x1" />
+
+    <ImageView
+        android:id="@+id/block9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/tile_back"
+        android:tag="8"
+        app:layout_constraintEnd_toEndOf="@+id/block6"
+        app:layout_constraintStart_toStartOf="@+id/block6"
+        app:layout_constraintTop_toBottomOf="@+id/block6"
+        tools:src="@drawable/x1" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/quit_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Quit"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

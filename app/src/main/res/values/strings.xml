@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="try_again">Try again!</string>
+    <string name="announce_draw">It\'s a Draw!</string>
+    <string name="ai_won">Ai Won!</string>
+    <string name="human_won">You Won!</string>
+    <string name="next_level">Next level!</string>
+</resources>

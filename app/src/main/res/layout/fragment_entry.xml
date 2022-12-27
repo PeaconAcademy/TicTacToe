@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.entry.EntryFragment">
+
+    <TextView
+        android:id="@+id/choose_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your symbol:" />
+
+    <LinearLayout
+        android:id="@+id/types"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_symbol"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/typeX"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/highlight"
+            android:src="@drawable/x1" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/typeO"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/o1" />
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/types" />
+
+    <TextView
+        android:id="@+id/difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space1"
+        android:text="Select difficulty level:" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/difficulty"
+        android:layout_centerHorizontal="true"
+        android:stepSize="1"
+        android:valueFrom="1"
+        android:valueTo="3" />
+
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/slider" />
+
+    <TextView
+        android:id="@+id/start_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/space2"
+        android:text="Always start first:" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/start_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_text"
+        android:layout_centerHorizontal="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/start_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_first"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="start game" />
+
+</RelativeLayout>
